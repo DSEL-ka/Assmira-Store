@@ -53,13 +53,11 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Assmira shop is running on port ${PORT}`);
-});server.listen(PORT, HOST, () => {
-  console.log(`Assmira shop is running: http://${HOST}:${PORT}`);
+
   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
     console.log('Telegram is not configured yet. Copy .env.example to .env and fill TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.');
   }
 });
-
 async function handleOrder(req, res) {
   if (!sameOrigin(req)) throw new PublicError(403, 'Запрос отклонён защитой сайта.');
   if (!rateLimit(req, 8, 60_000)) throw new PublicError(429, 'Слишком много заявок. Попробуйте немного позже.');
