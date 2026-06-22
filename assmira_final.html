@@ -214,7 +214,7 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
 <section class="hero">
   <div class="hbg">AS</div>
   <div class="hi">
-    <div class="hbadge">Новая коллекция 2025</div>
+    <div class="hbadge">Новая коллекция 2026</div>
     <h1 class="h1">Assmira<br><em>Collection</em></h1>
     <p class="htag">Одежда, созданная быть замеченной</p>
     <div class="hbtns">
@@ -288,9 +288,9 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
     </div>
     <div><p class="fh">Навигация</p><ul class="ful"><li><a href="#col">Коллекция</a></li><li><a href="#about">О бренде</a></li><li><a href="#contact">Контакты</a></li></ul></div>
     <div><p class="fh">Покупателям</p><ul class="ful"><li><a href="#">Доставка</a></li><li><a href="#">Возврат</a></li><li><a href="#">Размерная сетка</a></li></ul></div>
-    <div><p class="fh">Контакты</p><ul class="ful"><li><a href="#">+7 (___) ___-__-__</a></li><li><a href="#">info@assmira.ru</a></li><li><a href="#">Telegram</a></li></ul></div>
+    <div><p class="fh">Контакты</p><ul class="ful"><li><a href="#">+7 (988) 273-36-94</a></li><li><a href="#">info@assmira.ru</a></li><li><a href="#">Telegram</a></li></ul></div>
   </div>
-  <div class="fbot"><span>© 2025 Assmira Collection · AS</span><span>Сделано с ♡</span></div>
+  <div class="fbot"><span>© 2026 Assmira Collection · AS</span><span>Сделано с ♡</span></div>
 </footer>
 
 <div class="cov" id="cov" onclick="tCart()"></div>
@@ -328,6 +328,7 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
   </div>
 </div>
 <div class="toast" id="toast"></div>
+
 <script>
 const PRODUCTS=[
   {id:1,name:'Emerald Dream',desc:'Изысканное вечернее платье-русалка с открытыми плечами. Атласная ткань изумрудного цвета подчёркивает каждую линию силуэта.',price:32000,tag:'Вечернее',imgs:['green1','green2','green3']},
@@ -417,7 +418,8 @@ async function subOrder(){
   st.textContent='Отправляем заказ...';st.classList.remove('err');btn.disabled=true;btn.textContent='Отправляем...';
   try{
     if(location.protocol==='file:')throw new Error('Запустите сайт через сервер, чтобы заказ ушёл в Telegram.');
-const res=await fetch('https://assmira-store.onrender.com/api/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});    const data=await res.json().catch(()=>({}));
+    const res=await fetch('/api/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json().catch(()=>({}));
     if(!res.ok)throw new Error(data.error||'Не удалось отправить заказ. Попробуйте ещё раз.');
     const ords=JSON.parse(localStorage.getItem('as_orders')||'[]');
     ords.push({id:data.orderId||Date.now(),date:new Date().toLocaleString('ru-RU'),customer:payload.customer,items:cart.map(i=>({name:i.name,size:i.size,qty:i.qty,price:i.price})),total:cart.reduce((s,i)=>s+i.price*i.qty,0)});
