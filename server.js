@@ -8,7 +8,7 @@ const ROOT = __dirname;
 loadEnv(path.join(ROOT, '.env'));
 
 const PORT = Number(process.env.PORT || 3000);
-const HOST = process.env.HOST || '127.0.0.1';
+const HOST = process.env.HOST || '0.0.0.0';
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
 const TRUST_PROXY = process.env.TRUST_PROXY === 'true';
