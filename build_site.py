@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 import base64, os, sys
 
@@ -28,6 +29,7 @@ PHOTOS = {
     "tile2":"img/IMG_8731.JPG",
     "tile3":"img/IMG_8733.JPG",
 }
+
 missing=[f for f in PHOTOS.values() if not os.path.exists(f)]
 if missing:
     print("Не найдены файлы:")
