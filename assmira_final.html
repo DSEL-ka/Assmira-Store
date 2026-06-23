@@ -330,7 +330,7 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
 <div class="toast" id="toast"></div>
 
 <script>
-  const IMGS={
+  const IMGS = {
   green1:'img/IMG_8719.jpeg',
   green2:'img/IMG_8720.jpeg',
   green3:'img/IMG_8721.jpeg',
@@ -343,32 +343,37 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
   tulip2:'img/IMG_8726.jpeg',
   tulip3:'img/IMG_8727.jpeg',
 
-  pink1:'img/IMG_8755.jpeg',
-  pink2:'img/IMG_8756.jpeg',
-  pink3:'img/IMG_8757.jpeg',
+  pink1:'img/IMG_8753.jpeg',
+  pink2:'img/IMG_8754.jpeg',
+  pink3:'img/IMG_8755.jpeg',
 
   palm1:'img/IMG_8728.jpeg',
-  palm2:'img/IMG_8729.jpeg', palm2:'img/IMG_8730.jpeg',
+  palm2:'img/IMG_8729.jpeg', 
+  palm3:'img/IMG_8730.jpeg',
 
   tile1:'img/IMG_8731.jpeg',
   tile2:'img/IMG_8732.jpeg',
-  tile2:'img/IMG_8733.jpeg',
+  tile3:'img/IMG_8733.jpeg',
 
-  cherry1:'img/IMG_8734.jpeg', cherry1:'img/IMG_8735.jpeg', cherry1:'img/IMG_8736.jpeg',
+  cherry1:'img/IMG_8734.jpeg', 
+  cherry2:'img/IMG_8735.jpeg', 
+  cherry3:'img/IMG_8736.jpeg',
 
   red1:'img/IMG_8737.jpeg',
-  red2:'img/IMG_8738.jpeg',red2:'img/IMG_8739.jpeg',
+  red2:'img/IMG_8738.jpeg',
+  red3:'img/IMG_8739.jpeg',
 
   sky1:'img/IMG_8740.jpeg',
-  sky2:'img/IMG_8741.jpeg', sky2:'img/IMG_8742.jpeg',
+  sky2:'img/IMG_8741.jpeg', 
+  sky3:'img/IMG_8742.jpeg',
 
   black1:'img/IMG_8744.jpeg',
-  black2:'img/IMG_8745.jpeg', black2:'img/IMG_8746.jpeg',
+  black2:'img/IMG_8745.jpeg', 
+  black3:'img/IMG_8746.jpeg',
 
-  crystal1:'img/IMG_8749.jpeg',crystal1:'img/IMG_8750.jpeg',crystal1:'img/IMG_8751.jpeg',
-  lace1:'img/IMG_8753.jpeg',
-  lace2:'img/IMG_8754.jpeg',
-  lace3:'img/IMG_8755.jpeg',
+  crystal1:'img/IMG_8749.jpeg',
+  crystal2:'img/IMG_8750.jpeg',
+  crystal3:'img/IMG_8751.jpeg',
 
   tulle1:'img/IMG_8756.jpeg',
   tulle2:'img/IMG_8757.jpeg',
@@ -380,21 +385,25 @@ footer{background:var(--tmain);color:#f8c8d9;padding:5rem 4rem 2.5rem}
   rose3:'img/IMG_8763.jpeg',
 
 
-  ig1:'img/IMG_8765.jpeg',ig1:'img/IMG_8766.jpeg',ig1:'img/IMG_8767.jpeg'
+  ig1:'img/IMG_8765.jpeg',
+  ig2:'img/IMG_8766.jpeg',
+  ig3:'img/IMG_8767.jpeg'
+};
+
 const PRODUCTS=[
-  {id:1,name:'Emerald Dream',desc:'Изысканное вечернее платье-русалка с открытыми плечами. Атласная ткань изумрудного цвета подчёркивает каждую линию силуэта.',price:32000,tag:'Вечернее',imgs:['green1','green2','green3']},
-  {id:2,name:'Parisian Dot',desc:'Лаконичное платье в горошек с запахом — классика в современном прочтении. Подходит для любого светского выхода.',price:18500,tag:'Классика',imgs:['dot1','dot2','dot3']},
-  {id:3,name:'Midnight Tulip',desc:'Миди-платье на тонких бретелях с акварельным принтом тюльпанов. Идеально для вечерних прогулок и элегантных ужинов.',price:21000,tag:'Casual Luxe',imgs:['tulip1','tulip2','tulip3']},
-  {id:4,name:'Flamingo Sunset',desc:'Огненный ансамбль из рубашки и широких брюк в оранжево-розовом принте. Дерзко, ярко, незабываемо.',price:29000,tag:'Ансамбль',imgs:['pink1','pink2','pink3']},
-  {id:5,name:'Palm Royale',desc:'Кафтан-накидка с монументальным принтом пальмовых листьев. Свобода, роскошь и лёгкость в каждом движении.',price:24000,tag:'Resort Wear',imgs:['palm1','palm2','palm3']},
-  {id:6,name:'Azzurro Tile',desc:'Облегающее платье с орнаментом в стиле итальянской майолики. Синий и белый — вечный дуэт средиземноморского шика.',price:26000,tag:'Вечернее',imgs:['tile1','tile2','tile3']},
-  {id:7,name:'Cherry Blossom',desc:'Воздушное платье с принтом цветущей сакуры на молочном фоне. Воланы по подолу и открытые плечи создают образ утончённой женственности.',price:19500,tag:'Праздничное',imgs:['cherry1']},
-  {id:8,name:'Red Passion',desc:'Алое платье-миди с объёмными пышными рукавами и корсетным лифом. Мелкий цветочный принт добавляет нежности в яркий страстный образ.',price:22000,tag:'Праздничное',imgs:['red1','red2']},
-  {id:9,name:'Blossom Garden',desc:'Белое платье с нежным голубым цветочным принтом и роскошными объёмными рукавами. Баска и оборка по подолу — романтичный силуэт мечты.',price:27500,tag:'Праздничное',imgs:['sky1','sky2','sky3','blue1','blue2']},
-  {id:10,name:'Noir Velvet',desc:'Элегантный чёрный бархатный корсет с сетчатыми перчатками в стиле haute couture. Дерзкая роскошь для тех, кто не боится быть замеченной.',price:31000,tag:'Вечернее',imgs:['black1','black2','black3']},
-  {id:11,name:'Crystal Night',desc:'Длинное чёрное платье в мелкий блеск с кружевным разрезом и чокером. Каждая деталь — о роскоши ночи.',price:28000,tag:'Вечернее',imgs:['crystal1','lace1','lace2','lace3']},
-  {id:12,name:'Rose Tulle',desc:'Нежное розовое платье с открытыми плечами, мягкой драпировкой и выразительным вечерним силуэтом. Образ для особого выхода.',price:30000,tag:'Вечернее',imgs:['tulle1','tulle2','tulle3','tulle4']},
-  {id:13,name:'Rosa Royale',desc:'Цветочный ансамбль с красными розами, акцентной линией талии и праздничным характером. Женственный комплект для яркого события.',price:29500,tag:'Ансамбль',imgs:['rose1','rose2','rose3','rose4']}
+  {id:1,name:'Изумруд',desc:'Вечернее платье "Изумруд" было создано с большим трепетом и каждая деталь в нём отражает мою Оду Женщине и Женственности, как главному произведению искусства. ',price:32000,tag:'Вечернее',imgs:['green1','green2','green3']},
+  {id:2,name:'Марелин',desc:'Платье "Марелин" в горошек - олицетворение классического женственного образа на любой случай.',price:18500,tag:'Классика',imgs:['dot1','dot2','dot3']},
+  {id:3,name:'Fern',desc:'Туника "Fern" из премиального холодного итальянского шелка станет вашей второй кожей! Её просто хочется касаться снова и снова.',price:21000,tag:'Casual Luxe',imgs:['tulip1','tulip2','tulip3']},
+  {id:4,name:'Malena',desc:'В платье "Malena" Вы гарантированно пробудите внутреннюю Чёрную Кошку, что живет в каждой женщине и гуляет сама по себе. Ведь невозможно обуздать эту сумасшедшую энергию сексуальности и свободы, когда в сложном силуэтном крое и роскошном кружеве раскрывается истинная природа женственности.',price:20000,tag:'Ансамбль',imgs:['pink1','pink2','pink3']},
+  {id:5,name:'Pink Summer',desc:'Костюм из шелка "Pink Summer" oversize для любого события, где ты будешь самой яркой вспышкой!',price:24000,tag:'Resort Wear',imgs:['palm1','palm2','palm3']},
+  {id:6,name:'Maiolica',desc:'Сарафан "Maiolica" из итальянского холодного шелка "Dolce Gabbana" в знаменитом одноименном орнаменте итальянского культурного наследия.',price:26000,tag:'Вечернее',imgs:['tile1','tile2','tile3']},
+  {id:7,name:'Secret garden',desc:'Платье "Secret garden" - олицетворение женственности и страсти. Нежный цветочный принт, лаконичный крой и восторженные взгляды - гарантия вашего настроения на летний вечер, который обещает быть томным.',price:19500,tag:'Праздничное',imgs:['cherry1','cherry2','cherry3']},
+  {id:8,name:'Sakura',desc:'Сарафан "Sakura" из струящегося шелка с цветочным принтом цветущей сакуры. Женственность, легкость и нежность - ассоциации, которые приходят при виде этого изделия и остаются в памяти надолго.',price:22000,tag:'Праздничное',imgs:['red1','red2','red3']},
+  {id:9,name:'Кармен',desc:'Яркой вспышкой запомнится на всю жизнь. Неминуемо точно. Впиваясь чувствами в глубины души. Уйти, оставив кроваво-алый след Любви и Боли. Невыносимо, но безумно, чувственно и филигранно, словно дивный сон, никогда не повторившийся в ночи.',price:27500,tag:'Праздничное',imgs:['sky1','sky2','sky3']},
+  {id:10,name:'Blue flowers',desc:'Изящный костюм-двойка «Blue flowers» - воплощение лёгкости и романтики. Невесомый натуральный шифон, нежный цветочный принт и идеальный крой создают образ, который парит.',price:31000,tag:'Вечернее',imgs:['black1','black2','black3']},
+  {id:11,name:'Princess',desc:'Вечернее платье "Princess" в зефирно-розовом цвете. Корсетная нежность, словно клубничный зефир.',price:30000,tag:'Вечернее',imgs:['tulle1','tulle2','tulle3']},
+  {id:12,name:'Flowers',desc:'Новинка костюм "Flowers" из итальянского холодного шелка для самого главного праздника. Роскошь форм, мягкие линии, яркий принт и идеальная посадка для любого типа фигуры! Гарантируем - в этом изделии вы будете сиять ярче звёзд!.',price:29500,tag:'Ансамбль',imgs:['rose1','rose2','rose3']},
+  {id:13,name:'Odri',desc:'Классический образ вне времени и моды: бархатный костюм-двойка "Odri". Корсетный топ, создающий идеальный силуэт "песочные часы" и юбка длины мини/миди (на выбор).',price:28000,tag:'Вечернее',imgs:['crystal1','crystal2','crystal3']},
 ];
 
 let cart=JSON.parse(localStorage.getItem('as_cart')||'[]');

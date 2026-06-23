@@ -1,17 +1,17 @@
 {
   "products": [
-    {"id": 1, "name": "Emerald Dream", "price": 32000},
-    {"id": 2, "name": "Parisian Dot", "price": 18500},
-    {"id": 3, "name": "Midnight Tulip", "price": 21000},
-    {"id": 4, "name": "Flamingo Sunset", "price": 29000},
-    {"id": 5, "name": "Palm Royale", "price": 24000},
-    {"id": 6, "name": "Azzurro Tile", "price": 26000},
-    {"id": 7, "name": "Cherry Blossom", "price": 19500},
-    {"id": 8, "name": "Red Passion", "price": 22000},
-    {"id": 9, "name": "Blossom Garden", "price": 27500},
-    {"id": 10, "name": "Noir Velvet", "price": 31000},
-    {"id": 11, "name": "Crystal Night", "price": 28000},
-    {"id": 12, "name": "Rose Tulle", "price": 30000},
-    {"id": 13, "name": "Rosa Royale", "price": 29500}
+    {"id": 1, "name": "Изумруды", "price": 32000},
+    {"id": 2, "name": "Марелин", "price": 18500},
+    {"id": 3, "name": "Fern", "price": 21000},
+    {"id": 4, "name": "Malena", "price": 20000},
+    {"id": 5, "name": "Pink Summer", "price": 24000},
+    {"id": 6, "name": "Maiolica", "price": 26000},
+    {"id": 7, "name": "Secret garden", "price": 19500},
+    {"id": 8, "name": "Sakura", "price": 22000},
+    {"id": 9, "name": "Кармен", "price": 27500},
+    {"id": 10, "name": "Blue flowers", "price": 31000},
+    {"id": 11, "name": "Princess", "price": 30000},
+    {"id": 12, "name": "Flowers", "price": 29500},
+    {"id": 13, "name": "Odri", "price": 29500}
   ]
 }
