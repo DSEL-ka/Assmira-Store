@@ -1,17 +1,17 @@
 {
   "products": [
-    {"id": 1, "name": "Изумруды", "price": 32000},
+    {"id": 1, "name": "Изумруды", "price": 30000},
     {"id": 2, "name": "Марелин", "price": 18500},
     {"id": 3, "name": "Fern", "price": 21000},
     {"id": 4, "name": "Malena", "price": 20000},
-    {"id": 5, "name": "Pink Summer", "price": 24000},
-    {"id": 6, "name": "Maiolica", "price": 26000},
-    {"id": 7, "name": "Secret garden", "price": 19500},
-    {"id": 8, "name": "Sakura", "price": 22000},
-    {"id": 9, "name": "Кармен", "price": 27500},
-    {"id": 10, "name": "Blue flowers", "price": 31000},
+    {"id": 5, "name": "Pink Summer", "price": 18000},
+    {"id": 6, "name": "Maiolica", "price": 20000},
+    {"id": 7, "name": "Secret garden", "price": 18000},
+    {"id": 8, "name": "Sakura", "price": 18000},
+    {"id": 9, "name": "Кармен", "price": 18000},
+    {"id": 10, "name": "Blue flowers", "price": 20000},
     {"id": 11, "name": "Princess", "price": 30000},
-    {"id": 12, "name": "Flowers", "price": 29500},
-    {"id": 13, "name": "Odri", "price": 29500}
+    {"id": 12, "name": "Flowers", "price": 25000},
+    {"id": 13, "name": "Odri", "price": 20000}
   ]
 }
